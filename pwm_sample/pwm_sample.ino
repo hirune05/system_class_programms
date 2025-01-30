@@ -2,7 +2,7 @@
 const int ledPin = 14;  // 14 corresponds to GPIO14
 
 // setting PWM properties
-const int freq = 5000;
+const int freq = 38000;
 const int resolution = 8;
  
 void setup(){
@@ -14,13 +14,7 @@ void setup(){
 }
  
 void loop(){
-  // increase the LED brightness
-  ledcWrite(ledPin, 255);
-
-  // decrease the LED brightness
-  for(int dutyCycle = 255; dutyCycle >= 0; dutyCycle--){
-    // changing the LED brightness with PWM
-    ledcWrite(ledPin, dutyCycle);   
+    // increase the LED brightness
+    ledcWrite(ledPin, 255);
     delay(15);
-  }
 }
